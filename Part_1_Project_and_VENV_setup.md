@@ -35,6 +35,10 @@
   }
 ```
 
-- Save the snippet. and the prefix keyword "setup"
+
+**3. Saving and Testing:**
+
+1. Save the snippets file.
+2. in a .html file type the prefix keyword "setup"
 
 
