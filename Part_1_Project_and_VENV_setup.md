@@ -14,16 +14,19 @@
     "prefix": "setup",
     "body": [
       "# Create project directory",
-      "mkdir $1_kiosk",
+      "mkdir project_name",
 
       "# Navigate to project directory",
       "cd $1_kiosk",
 
-      "# Copy a venv from your old project and place it here in our new project directory",
+      "# Open project in VS Code",
+      "code ."
+  
+      "# Locate a venv folder from your old project and paste in your new",
       "",
 
       "# Activate virtual environment",
-      "appvenv\Scripts\activate",
+      "copiedvenv\Scripts\activate",
 
       "# Open project in VS Code",
       "code ."
