@@ -3,7 +3,7 @@
 **1. Accessing the Snippet HQ:**
 
 * Open VS Code. Click on **File > Preferences > Configure User Snippets**.
-* Choose the language for your snippet (e.g., JavaScript) or click "New Global Snippets" for any language.
+* Choose the language for your snippet (e.g., JavaScript).
 
 **3. Meet the Snippet Squad:**
 
