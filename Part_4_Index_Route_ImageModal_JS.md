@@ -48,7 +48,7 @@ This section provides a code snippet for index.html that is link to your first r
 ```
 {
     "Flask Route for Index Page": {
-        "prefix": "flaskrouteindex",
+        "prefix": "indexroute",
         "body": [
             "@app.route('/')",
             "def index():",
@@ -93,3 +93,35 @@ This section provides a code snippet for the `image_modal.html` template, which 
         "description": "HTML template for an image modal in a Flask application"
 }
 ```
+# `static/js/script.js` Functionality Snippet
+
+This section provides a JavaScript code snippet for `script.js`. This script includes functionalities for adding items to a shopping cart and displaying product images in a modal.
+
+### JavaScript Snippet for Cart Addition and Image Modal
+
+```json
+{
+    "Add Item and Image Modal JS": {
+        "prefix": "js",
+        "body": [
+            "// Inside script.js",
+            "// Add item functionality",
+            "let totalCost = 0;",
+            "",
+            "function updateTotalCostDisplay() {",
+            "    const totalCostDisplay = document.getElementById('totalCost');",
+            "    totalCostDisplay.innerText = totalCost.toFixed(2);",
+            "}",
+            "",
+            "function addItemToCart(price) {",
+            "    totalCost += parseFloat(price);",
+            "    updateTotalCostDisplay();",
+            "}",
+            "// Modal for image",
+            "function showImageinModal(imageUrl) {",
+            "    document.getElementById('modalImage').src = imageUrl;",
+            "}"
+        ],
+        "description": "JavaScript functions for adding items to cart and showing images in a modal"
+    }
+}
