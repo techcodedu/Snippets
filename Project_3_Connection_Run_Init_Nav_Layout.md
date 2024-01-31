@@ -2,6 +2,48 @@
 
 Below is the SQL schema for the `yourname_kiosk` database. This schema includes tables for products, orders, and order items, along with the relationships between them.
 
+### Note* look for .json SQL 
+```
+    "SQL Kiosk Database Schema": {
+        "prefix": "kioskdb",
+        "body": [
+            "CREATE DATABASE yourname_kiosk;",
+            "",
+            "USE yourname_kiosk;",
+            "",
+            "CREATE TABLE products (",
+            "    product_id INT AUTO_INCREMENT PRIMARY KEY,",
+            "    name VARCHAR(255) NOT NULL,",
+            "    unit VARCHAR(50),",
+            "    price_per_unit DECIMAL(10, 2),",
+            "    image_url VARCHAR(255)",
+            ");",
+            "",
+            "CREATE TABLE orders (",
+            "    order_id INT AUTO_INCREMENT PRIMARY KEY,",
+            "    total_price DECIMAL(10, 2),",
+            "    date_time DATETIME DEFAULT CURRENT_TIMESTAMP,",
+            "    customer_contact VARCHAR(255)",
+            ");",
+            "",
+            "CREATE TABLE order_items (",
+            "    order_item_id INT AUTO_INCREMENT PRIMARY KEY,",
+            "    order_id INT,",
+            "    product_id INT,",
+            "    quantity DECIMAL(10, 2),",
+            "    price DECIMAL(10, 2),",
+            "    FOREIGN KEY (order_id) REFERENCES orders(order_id),",
+            "    FOREIGN KEY (product_id) REFERENCES products(product_id)",
+            ");",
+            "",
+            "INSERT INTO `products` (`product_id`, `name`, `unit`, `price_per_unit`, `image_url`) VALUES",
+            "(1, 'Cucumber', 'kg', 3.00, 'images/cucumber.jpg'),",
+            "(2, 'Carrot', 'pc', 4.00, 'images/carrot.jpg');"
+        ],
+        "description": "Creates the necessary tables and relations for the Kiosk database"
+    }
+```
+
 
 # `init.py` Connection Code Snippet
 
@@ -82,7 +124,7 @@ The following code snippet is for the layouts.html.
             "    <header>",
             "      <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">",
             "        <div class=\"container\">",
-            "          <a class=\"navbar-brand\" href=\"/\">MKNR Palengke Kiosk</a>",
+            "          <a class=\"navbar-brand\" href=\"/\">Your Kiosk Name</a>",
             "          <div class=\"navbar-nav\">",
             "            <a class=\"nav-link\" href=\"/\">Home</a>",
             "            <a class=\"nav-link\" href=\"/orders\">Orders</a>",
