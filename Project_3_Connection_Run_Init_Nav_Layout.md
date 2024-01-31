@@ -142,6 +142,7 @@ The following code snippet is for the layouts.html.
             "",
             "    <!-- Bootstrap JS Link -->",
             "    <script src=\"{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}\"></script>",
+            "     <script src=\"{{ url_for('static', filename='js/script.js') }}\"></script>",
             "  </body>",
             "</html>"
         ],
