@@ -1,10 +1,16 @@
+# SQL Schema for the Kiosk Project
+
+Below is the SQL schema for the `yourname_kiosk` database. This schema includes tables for products, orders, and order items, along with the relationships between them.
+
+
 # `init.py` Connection Code Snippet
 
 This section provides a code snippet for setting up a Flask application with a MySQL database, ideal for inclusion in `init.py`.
 
 ## Usage
 
-This snippet initializes a Flask application and configures it to connect to a MySQL database.
+This snippet initializes a Flask application and configures it to connect to a MySQL database. 
+### Note* look for .json python 
 
 ### Snippet
 
@@ -36,6 +42,8 @@ This snippet initializes a Flask application and configures it to connect to a M
 
 The following code snippet is for the `run.py` file, which is used to run the Flask application in development mode with debug enabled.
 
+### Note* look for .json python 
+
 ```
     "Run Flask App": {
         "prefix": "run",
@@ -49,8 +57,11 @@ The following code snippet is for the `run.py` file, which is used to run the Fl
 }
 ```
 # `templates/layouts.html` Execution Code snippet
+
+The following code snippet is for the layouts.html. 
+### Note* look for .json html 
 ```
-{
+
     "Flask Layout Template": {
         "prefix": "layout",
         "body": [
@@ -93,6 +104,6 @@ The following code snippet is for the `run.py` file, which is used to run the Fl
             "</html>"
         ],
         "description": "Basic Flask layout template with Bootstrap"
-    }
+
 }
 ```
